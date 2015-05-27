@@ -240,6 +240,7 @@ For usage and examples: colpick.com/plugin
 				var calW = cal.width();
 				if (left + calW > viewPort.l + viewPort.w) {
 					left -= calW;
+					left += this.offsetWidth;
 				}
 				cal.css({left: left + 'px', top: top + 'px'});
 				if (cal.data('colpick').onShow.apply(this, [cal.get(0)]) != false) {
